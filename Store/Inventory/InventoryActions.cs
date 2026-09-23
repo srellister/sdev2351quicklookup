@@ -17,3 +17,6 @@ namespace InventoryLookup.Store.Inventory;
 
 // TODO 2: public sealed record SearchAction(...);
 // TODO 2: public sealed record ClearAction;
+public sealed record SearchAction(string Query, IReadOnlyList<InventoryItem> Results);
+public sealed record ClearAction;
+ 

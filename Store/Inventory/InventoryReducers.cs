@@ -1,4 +1,5 @@
 using Fluxor;
+using InventoryLookup.Pages;
 
 namespace InventoryLookup.Store.Inventory;
 
@@ -20,4 +21,16 @@ namespace InventoryLookup.Store.Inventory;
 public static class InventoryReducers
 {
     // TODO 3
+
+    [ReducerMethod]
+    public static InventoryState OnSearch(InventoryState state, SearchAction action)
+    {
+        return state with {Query = action.Query, Results = action.Results, HasSearched=true};
+    }
+
+    [ReducerMethod(typeof(ClearAction))]
+    public static InventoryState OnClear(InventoryState state)
+    {
+        return new InventoryState();
+    }
 }

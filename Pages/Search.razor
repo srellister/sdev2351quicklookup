@@ -3,6 +3,8 @@
 @inject IInventoryService Inventory
 @inject NavigationManager Nav
 @* TODO 4a: inject IState<InventoryState> State and IDispatcher Dispatcher *@
+@inject IState<InventoryState> State
+@inject IDispatcher Dispatcher
 
 <PageTitle>Search inventory</PageTitle>
 <h1>Search inventory</h1>
@@ -29,10 +31,10 @@ TASK 4 (≈8 min): Component wiring -- Search page
     <button @onclick="SearchAsync" disabled="@isLoading">
         @(isLoading ? "Searching…" : "Search")
     </button>
-    <button class="secondary" @onclick="Clear" disabled="@(!hasSearched)">Clear</button>
+    <button class="secondary" @onclick="Clear" disabled="@(State.Value.HasSearched)">Clear</button>
 </div>
 
-@if (!hasSearched)
+@if (State.Value.HasSearched)
 {
     <p class="muted">Enter a term and press Search. Leave it blank to list everything.</p>
 }
@@ -67,7 +69,6 @@ else
     private bool isLoading;
 
     // TODO 4d: delete these two placeholders and read from State.Value instead.
-    private bool hasSearched => false;
     private IReadOnlyList<InventoryItem> results => Array.Empty<InventoryItem>();
 
     protected override void OnInitialized()
@@ -82,7 +83,10 @@ else
         try
         {
             // TODO 4b: call the service, then dispatch SearchAction with the results.
+            Inventory
             await Task.CompletedTask;
+            Dispatcher.Dispatch( new SearchAction());
+            
         }
         finally
         {

@@ -1041,6 +1041,6 @@ A:\SDEV\2351\lessons\InventoryLookup\obj\Debug\net8.0\InventoryLookup.dll
 A:\SDEV\2351\lessons\InventoryLookup\obj\Debug\net8.0\refint\InventoryLookup.dll
 A:\SDEV\2351\lessons\InventoryLookup\obj\Debug\net8.0\InventoryLookup.pdb
 A:\SDEV\2351\lessons\InventoryLookup\obj\Debug\net8.0\ref\InventoryLookup.dll
-A:\SDEV\2351\lessons\InventoryLookup\obj\Debug\net8.0\compressed\x46htp4eei-{0}-j9r99qkszm-j9r99qkszm.gz
-A:\SDEV\2351\lessons\InventoryLookup\obj\Debug\net8.0\compressed\7pvjl6gvsl-{0}-c519b5kvwb-c519b5kvwb.gz
-A:\SDEV\2351\lessons\InventoryLookup\obj\Debug\net8.0\compressed\bsdtt5trep-{0}-gpt332hauh-gpt332hauh.gz
+A:\SDEV\2351\lessons\InventoryLookup\obj\Debug\net8.0\compressed\x46htp4eei-{0}-57w5l9b6ak-57w5l9b6ak.gz
+A:\SDEV\2351\lessons\InventoryLookup\obj\Debug\net8.0\compressed\7pvjl6gvsl-{0}-pfiycn4szb-pfiycn4szb.gz
+A:\SDEV\2351\lessons\InventoryLookup\obj\Debug\net8.0\compressed\bsdtt5trep-{0}-pt3kw10cd7-pt3kw10cd7.gz
