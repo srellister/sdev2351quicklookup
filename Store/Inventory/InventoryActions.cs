@@ -15,5 +15,5 @@ namespace InventoryLookup.Store.Inventory;
 //   ClearAction   carries nothing; it resets the slice.
 // ============================================================================
 
-// TODO: public sealed record SearchAction(...);
-// TODO: public sealed record ClearAction;
+// TODO 2: public sealed record SearchAction(...);
+// TODO 2: public sealed record ClearAction;

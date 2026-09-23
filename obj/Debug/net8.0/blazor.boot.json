@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "InventoryLookup",
   "resources": {
-    "hash": "sha256-6rmS/ZPi93gG8ySDzqCWLDUts2shq0AsvnJgJqZbRVo=",
+    "hash": "sha256-7ul6plCMZJjl0UlLZcdhrFmAN/5NK1dOwdMcCSxLy0Y=",
     "jsModuleNative": {
       "dotnet.native.js": "sha256-dexsp+9ih2C28zVhNnPXUbkz2QCq7lHpkyDcmaLl7NQ="
     },
@@ -211,10 +211,10 @@
       "mscorlib.wasm": "sha256-pP80UGziulDYhvVdeUaGEq9FlrHQDQmnCqVvx1FJZis=",
       "netstandard.wasm": "sha256-ARMsMyhWuSDjvzisfZbnEptnxh8Vh7VpHPhuT6iazy0=",
       "System.Private.CoreLib.wasm": "sha256-+28m4yuZsdz9ij1sJHvNH896fSI8gXgrQ9bhGO76Qqo=",
-      "InventoryLookup.wasm": "sha256-LF8cZhMXpz2ffnBe8QjmZD0QR4cg+COvmbGeBva9h2E="
+      "InventoryLookup.wasm": "sha256-R4PJARMziLgCqsRyFEOBOsl/pv0oDjMd6PrPym2TFz4="
     },
     "pdb": {
-      "InventoryLookup.pdb": "sha256-L8zpwG9B5T2d9AaP4b5/7rO11naZfT0sAiOrZn7kMvE="
+      "InventoryLookup.pdb": "sha256-EI24aHFiNMgoA7g2UFubKc8tsj/iK0uYYR0WNdJsvwo="
     }
   },
   "cacheBootResources": true,
