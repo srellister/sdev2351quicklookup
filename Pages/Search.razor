@@ -1,0 +1,101 @@
+@page "/"
+@inherits FluxorComponent
+@inject IInventoryService Inventory
+@inject NavigationManager Nav
+@* TODO 4a: inject IState<InventoryState> State and IDispatcher Dispatcher *@
+
+<PageTitle>Search inventory</PageTitle>
+<h1>Search inventory</h1>
+
+@*
+============================================================================
+TASK 4 (≈8 min): Component wiring -- Search page
+----------------------------------------------------------------------------
+ 4a. Inject IState<InventoryState> and IDispatcher (above).
+ 4b. In SearchAsync: call Inventory.SearchAsync(query), then
+     Dispatcher.Dispatch(new SearchAction(query, results)).
+ 4c. In Clear: dispatch ClearAction and blank the text box.
+ 4d. Replace the two placeholders below (hasSearched / results) with values
+     read from State.Value so the UI reacts to the store.
+ 4e. In OnInitialized, restore `query` from State.Value.Query so the text box
+     survives a round-trip to the detail page.
+============================================================================
+*@
+
+<div class="search-row">
+    <input placeholder="Name, SKU or category&hellip;"
+           @bind="query" @bind:event="oninput"
+           @onkeydown="OnKeyDown" />
+    <button @onclick="SearchAsync" disabled="@isLoading">
+        @(isLoading ? "Searching…" : "Search")
+    </button>
+    <button class="secondary" @onclick="Clear" disabled="@(!hasSearched)">Clear</button>
+</div>
+
+@if (!hasSearched)
+{
+    <p class="muted">Enter a term and press Search. Leave it blank to list everything.</p>
+}
+else if (results.Count == 0)
+{
+    <p class="muted">No items match "<strong>@query</strong>".</p>
+}
+else
+{
+    <p class="muted">@results.Count result(s)</p>
+    <table>
+        <thead>
+            <tr><th>SKU</th><th>Name</th><th>Category</th><th>Qty</th><th>Location</th></tr>
+        </thead>
+        <tbody>
+            @foreach (var item in results)
+            {
+                <tr class="row-link" @onclick="@(() => Nav.NavigateTo($"/inventory/{item.Id}"))">
+                    <td>@item.Sku</td>
+                    <td>@item.Name</td>
+                    <td>@item.Category</td>
+                    <td class="@(item.IsLowStock ? "low" : null)">@item.QuantityOnHand</td>
+                    <td>@item.Location</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+    private string query = string.Empty;
+    private bool isLoading;
+
+    // TODO 4d: delete these two placeholders and read from State.Value instead.
+    private bool hasSearched => false;
+    private IReadOnlyList<InventoryItem> results => Array.Empty<InventoryItem>();
+
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+        // TODO 4e: query = State.Value.Query;
+    }
+
+    private async Task SearchAsync()
+    {
+        isLoading = true;
+        try
+        {
+            // TODO 4b: call the service, then dispatch SearchAction with the results.
+            await Task.CompletedTask;
+        }
+        finally
+        {
+            isLoading = false;
+        }
+    }
+
+    private void Clear()
+    {
+        query = string.Empty;
+        // TODO 4c: dispatch ClearAction.
+    }
+
+    private Task OnKeyDown(KeyboardEventArgs e) =>
+        e.Key == "Enter" ? SearchAsync() : Task.CompletedTask;
+}

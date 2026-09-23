@@ -1,0 +1,28 @@
+:root { --purple: #4b286d; --green: #2b8000; --grey: #676e73; --light: #f4f4f7; --red: #c12335; }
+* { box-sizing: border-box; }
+body { margin: 0; font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; color: #2a2c2e; background: #fff; }
+.topbar { display: flex; align-items: center; gap: 1rem; padding: .9rem 1.5rem; background: var(--purple); color: #fff; }
+.brand { color: #fff; text-decoration: none; font-weight: 700; font-size: 1.1rem; }
+.tag { font-size: .8rem; opacity: .8; }
+.container { max-width: 900px; margin: 0 auto; padding: 1.5rem 1rem; }
+h1 { margin: 0 0 1rem; font-size: 1.6rem; }
+.search-row { display: flex; gap: .5rem; margin-bottom: 1rem; }
+.search-row input { flex: 1; padding: .6rem .8rem; border: 1px solid #ccc; border-radius: 6px; font-size: 1rem; }
+button { padding: .6rem 1.1rem; border: 0; border-radius: 6px; font-size: .95rem; cursor: pointer; background: var(--green); color: #fff; }
+button.secondary { background: var(--light); color: #2a2c2e; }
+button:disabled { opacity: .5; cursor: default; }
+table { width: 100%; border-collapse: collapse; }
+th, td { text-align: left; padding: .55rem .6rem; border-bottom: 1px solid #e5e5e5; }
+th { font-size: .8rem; text-transform: uppercase; color: var(--grey); }
+tr.row-link { cursor: pointer; }
+tr.row-link:hover { background: var(--light); }
+.low { color: var(--red); font-weight: 600; }
+.muted { color: var(--grey); }
+.card { border: 1px solid #e5e5e5; border-radius: 8px; padding: 1.2rem; }
+.card dl { display: grid; grid-template-columns: 160px 1fr; gap: .4rem 1rem; margin: 0; }
+.card dt { color: var(--grey); }
+.card dd { margin: 0; }
+.back { display: inline-block; margin-bottom: 1rem; color: var(--purple); }
+.loading { padding: 2rem; text-align: center; color: var(--grey); }
+#blazor-error-ui { background: lightyellow; bottom: 0; box-shadow: 0 -1px 2px rgba(0,0,0,.2); display: none; left: 0; padding: .6rem 1.25rem .7rem 1.25rem; position: fixed; width: 100%; z-index: 1000; }
+#blazor-error-ui .dismiss { cursor: pointer; position: absolute; right: .75rem; top: .5rem; }

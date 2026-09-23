@@ -1,0 +1,41 @@
+@page "/inventory/{Id:int}"
+@inherits FluxorComponent
+@* TODO 5a: inject IState<InventoryState> State *@
+
+<PageTitle>Item detail</PageTitle>
+
+@*
+============================================================================
+TASK 5 (≈5 min): Component wiring -- Detail page
+----------------------------------------------------------------------------
+ The <RouteGuard> below is pre-built (see Shared/RouteGuard.razor). It
+ redirects to RedirectTo whenever Allowed is false.
+
+ 5a. Inject IState<InventoryState>.
+ 5b. Make the `Item` property look the Id up in State.Value.Results.
+ 5c. Set Allowed to "@(Item is not null)".
+ 5d. Fill in the <dl> with SKU, Category, Quantity on hand (add class "low"
+     when Item.IsLowStock), Unit price (ToString("C")) and Location.
+
+ Test the guard: search, click a row, then press F5 on the detail page.
+ State is gone -> you should land back on "/".
+============================================================================
+*@
+
+<RouteGuard Allowed="false" RedirectTo="/">
+    <a class="back" href="/">&larr; Back to results</a>
+    <h1>@Item!.Name</h1>
+
+    <div class="card">
+        <dl>
+            @* TODO 5d *@
+        </dl>
+    </div>
+</RouteGuard>
+
+@code {
+    [Parameter] public int Id { get; set; }
+
+    // TODO 5b
+    private InventoryItem? Item => null;
+}

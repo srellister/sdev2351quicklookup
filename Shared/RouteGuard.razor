@@ -1,0 +1,32 @@
+@inject NavigationManager Nav
+
+@*
+    Pre-built route guard.
+    Wrap page content in <RouteGuard Allowed="..." RedirectTo="/">.
+    If Allowed is false the user is redirected and nothing is rendered.
+    Allowed is usually derived from Fluxor state, e.g. "is the requested
+    item present in the current search results?".
+*@
+
+@if (Allowed)
+{
+    @ChildContent
+}
+else
+{
+    <p class="muted">Redirecting&hellip;</p>
+}
+
+@code {
+    [Parameter, EditorRequired] public bool Allowed { get; set; }
+    [Parameter] public string RedirectTo { get; set; } = "/";
+    [Parameter] public RenderFragment? ChildContent { get; set; }
+
+    protected override void OnParametersSet()
+    {
+        if (!Allowed)
+        {
+            Nav.NavigateTo(RedirectTo, replace: true);
+        }
+    }
+}
