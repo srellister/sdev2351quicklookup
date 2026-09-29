@@ -1031,9 +1031,6 @@ A:\SDEV\2351\lessons\InventoryLookup\obj\Debug\net8.0\compressed\hwvo4z7104-{0}-
 A:\SDEV\2351\lessons\InventoryLookup\obj\Debug\net8.0\compressed\ft0l5oh04x-{0}-tptq2av103-tptq2av103.gz
 A:\SDEV\2351\lessons\InventoryLookup\obj\Debug\net8.0\compressed\zz4qs4hvvx-{0}-lfu7j35m59-lfu7j35m59.gz
 A:\SDEV\2351\lessons\InventoryLookup\obj\Debug\net8.0\compressed\k4hbt4t8hy-{0}-oyz0vx2fzb-oyz0vx2fzb.gz
-A:\SDEV\2351\lessons\InventoryLookup\obj\Debug\net8.0\compressed\x46htp4eei-{0}-koavdj04pp-koavdj04pp.gz
-A:\SDEV\2351\lessons\InventoryLookup\obj\Debug\net8.0\compressed\7pvjl6gvsl-{0}-1cysvazmgp-1cysvazmgp.gz
-A:\SDEV\2351\lessons\InventoryLookup\obj\Debug\net8.0\compressed\bsdtt5trep-{0}-my58851519-my58851519.gz
 A:\SDEV\2351\lessons\InventoryLookup\obj\Debug\net8.0\staticwebassets.build.json
 A:\SDEV\2351\lessons\InventoryLookup\obj\Debug\net8.0\staticwebassets.build.json.cache
 A:\SDEV\2351\lessons\InventoryLookup\obj\Debug\net8.0\staticwebassets.development.json
@@ -1044,3 +1041,6 @@ A:\SDEV\2351\lessons\InventoryLookup\obj\Debug\net8.0\InventoryLookup.dll
 A:\SDEV\2351\lessons\InventoryLookup\obj\Debug\net8.0\refint\InventoryLookup.dll
 A:\SDEV\2351\lessons\InventoryLookup\obj\Debug\net8.0\InventoryLookup.pdb
 A:\SDEV\2351\lessons\InventoryLookup\obj\Debug\net8.0\ref\InventoryLookup.dll
+A:\SDEV\2351\lessons\InventoryLookup\obj\Debug\net8.0\compressed\x46htp4eei-{0}-57w5l9b6ak-57w5l9b6ak.gz
+A:\SDEV\2351\lessons\InventoryLookup\obj\Debug\net8.0\compressed\7pvjl6gvsl-{0}-pfiycn4szb-pfiycn4szb.gz
+A:\SDEV\2351\lessons\InventoryLookup\obj\Debug\net8.0\compressed\bsdtt5trep-{0}-pt3kw10cd7-pt3kw10cd7.gz

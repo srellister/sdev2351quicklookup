@@ -15,7 +15,13 @@ namespace InventoryLookup.Store.Inventory;
 //       bool                        HasSearched  -> false
 //   • Fluxor needs a parameterless constructor (the implicit one is fine).
 // ============================================================================
-public sealed class InventoryState
+[FeatureState]
+public sealed record InventoryState
 {
-    // TODO
+    // TODO 1
+    public bool HasSearched {get; init;} = false;
+
+    public string Query {get; init;} = string.Empty;
+
+    public IReadOnlyList<InventoryItem> Results {get; init; } = [];
 }
